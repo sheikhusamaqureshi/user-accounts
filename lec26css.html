@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login & SignUp Page</title>
+    <link rel="stylesheet" href="styleform.css">
+</head>
+<body>
+    <section class="wrapper active">
+        <div class="form signup">
+            <header >Sign Up</header>
+            <form action="#">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="enter username" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"  placeholder="enter email">
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="enter password">
+    
+                <div class="checkbox">
+                    <label for="checkbox1">I accept all the terms & condition.</label>
+                    <input type="checkbox" id="checkbox1" name="checkbox" required>
+    
+    <br>
+    <br>
+    
+                </div>
+                <input type="submit" value="SignUp">
+            </form>
+    </div>
+    <div class="form login">
+        <header >Login</header>
+        <form action="#">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"  placeholder="enter email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="enter password">
+
+       <a href="#">Forget password?</a>
+            <input type="submit" value="Login">
+
+        </form>
+</div>
+</section>
+<script>
+        const wrapper = document.querySelector(".wrapper")
+        signupHeader = document.querySelector(".signup header"),
+        loginHeader = document.querySelector(".login header");
+
+loginHeader.addEventListener("click", () => {
+    wrapper.classList.add("active");
+});
+
+signupHeader.addEventListener("click", () => {
+    wrapper.classList.remove("active");
+});
+  
+</script>
+
+
+</body>
+</html>
